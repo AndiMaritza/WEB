@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Tambah Pegawai</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Fstyle.css">
+    <!-- Link ke Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+    Aplikasi Manajemen Pegawai
+</header>
+<div class="container">
+    <aside>
+        <ul class="menu">
+            <li><a href="dashboard.html" class="aktif"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="tabel.html" class="aktif"><i class="fas fa-users"></i> Data Pegawai</a></li>
+            <li><a href="tabel.html" class="aktif"><i class="fas fa-briefcase"></i> Data Jabatan</a></li>
+            <li><a href="login.html" class="aktif"><i class="fas fa-sign-out-alt"></i> Keluar</a></li>
+        </ul>
+    </aside>
+    <section class="main">
+        <div class="header-main">
+            <h2 class="judul">Tambah Pegawai</h2>
+        </div>
+        <form action="proses.php" method="post" class="form">
+            <div class="form-group">
+                <label for="foto"><i class="fas fa-user-circle"></i> Foto</label>
+                <div class="input">
+                    <input type="file" id="foto" name="foto" accept="image/*" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nama"><i class="fas fa-id-badge"></i> Nama</label>
+                <div class="input">
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-venus-mars"></i> Jenis Kelamin</label>
+                <div class="input radio-group">
+                    <label for="jk-l">
+                        <input type="radio" id="jk-l" name="jk" value="L" required> Laki-laki
+                    </label>
+                    <label for="jk-p">
+                        <input type="radio" id="jk-p" name="jk" value="P" required> Perempuan
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tanggal"><i class="fas fa-calendar-alt"></i> Tanggal Lahir</label>
+                <div class="input">
+                    <input type="date" id="tanggal" name="tanggal" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="jabatan"><i class="fas fa-briefcase"></i> Jabatan</label>
+                <div class="input">
+                    <select id="jabatan" name="jabatan" required>
+                        <option value="" disabled selected>Pilih Jabatan</option>
+                        <option value="direktur">Direktur</option>
+                        <option value="manajer">Manajer</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="sekretaris">Sekretaris</option>
+                        <option value="chef">Chef</option>
+                        <option value="waiter">Waiter/Waitress</option>
+                        <option value="kasir">Kasir</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group buttons">
+                <button type="submit" class="tombol simpan"><i class="fas fa-save"></i> Simpan</button>
+                <button type="reset" class="tombol reset"><i class="fas fa-times-circle"></i> Batal</button>
+            </div>
+        </form>
+    </section>
+</div>
+<footer>
+    Copyright &copy; 2024
+</footer>
+</body>
+</html>
